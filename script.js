@@ -1,5 +1,5 @@
 // include ngRoute for all routing needs
-var scotchApp = angular.module("scotchApp", ["ngRoute"]);
+var scotchApp = angular.module("scotchApp", ["ngRoute", "ngAnimate"]);
 
 // configure routes
 scotchApp.config(function($routeProvider, $locationProvider) {
@@ -26,12 +26,15 @@ scotchApp.config(function($routeProvider, $locationProvider) {
 // create the controllers and inject Angular's $scope
 scotchApp.controller("mainController", function($scope) {
   $scope.message = "Message from Main Controller";
+  $scope.pageClass = "page-home";
 });
 
 scotchApp.controller("aboutController", function($scope) {
   $scope.message = "Message from About Controller";
+  $scope.pageClass = "page-about";
 });
 
 scotchApp.controller("contactController", function($scope) {
   $scope.message = "Message from Contact Controller";
+  $scope.pageClass = "page-contact";
 });
