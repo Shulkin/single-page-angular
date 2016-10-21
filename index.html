@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<!-- define angular app -->
+<html ng-app="scotchApp">
   <head>
     <meta charset="utf-8">
     <title>Simple Single Page Application</title>
@@ -9,6 +10,8 @@
     <!-- load angular and angular route via CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <!-- load local js -->
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- Header and navbar -->
@@ -30,6 +33,7 @@
     <div id="main">
       <!-- angular templating -->
       <!-- this is where content will be injected -->
+      <div ng-view></div>
     </div>
   </body>
 </html>
